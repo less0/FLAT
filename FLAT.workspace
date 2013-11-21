@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="FLAT/FLAT.cbp" />
+		<Project filename="TerrainExport/TerrainExport.cbp">
+			<Depends filename="FLAT/FLAT.cbp" />
+		</Project>
+		<Project filename="TerrainGeneration/TerrainGeneration.cbp">
+			<Depends filename="FLAT/FLAT.cbp" />
+		</Project>
+		<Project filename="BMPOutTest/BMPOutTest.cbp">
+			<Depends filename="FLAT/FLAT.cbp" />
+			<Depends filename="TerrainExport/TerrainExport.cbp" />
+			<Depends filename="TerrainGeneration/TerrainGeneration.cbp" />
+		</Project>
+	</Workspace>
+</CodeBlocks_workspace_file>
