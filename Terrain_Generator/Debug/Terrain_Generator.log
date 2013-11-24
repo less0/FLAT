@@ -1,0 +1,25 @@
+﻿Der Buildvorgang wurde am 15.04.2012 09:45:56 gestartet.
+     1>Projekt "C:\Users\user\Documents\Visual Studio 2010\Projects\Terrain_Generator\Terrain_Generator\Terrain_Generator.vcxproj" auf Knoten "2", build Ziel(e).
+     1>InitializeBuildStatus:
+         "Debug\TerrainLib.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+       ClCompile:
+         Alle Ausgaben sind aktuell.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\TerrainLib.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DiamondSquare.cpp
+         DiamondSquare.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\user\Documents\Visual Studio 2010\Projects\Terrain_Generator\Debug\TerrainLib.lib" /NOLOGO Debug\constants.obj
+         Debug\DiamondSquare.obj
+         Debug\Error.obj
+         Debug\ErrorDeployer.obj
+         Debug\stdafx.obj
+         Debug\Terrain.obj
+         Debug\TerrainGenerator.obj
+         Terrain_Generator.vcxproj -> C:\Users\user\Documents\Visual Studio 2010\Projects\Terrain_Generator\Debug\TerrainLib.lib
+       FinalizeBuildStatus:
+         Die Datei "Debug\TerrainLib.unsuccessfulbuild" wird gelöscht.
+         Aktualisieren des Timestamps von "Debug\TerrainLib.lastbuildstate".
+     1>Die Erstellung des Projekts "C:\Users\user\Documents\Visual Studio 2010\Projects\Terrain_Generator\Terrain_Generator\Terrain_Generator.vcxproj" ist abgeschlossen, build Ziel(e).
+
+Das Erstellen war erfolgreich.
+
+Verstrichene Zeit 00:00:00.60
