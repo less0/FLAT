@@ -23,11 +23,11 @@ int main()
     int parts = 1;
     int size = 2100;
 
-    double param1 = 1;
-    double param2 = 1;
+    double param1 = .1;
+    double param2 = 2;
 
-    gen.setParameter(1, (const void*)&param1);
-    gen.setParameter(2, (const void*)&param2);
+    gen.setParameter(shared_ptr<DoubleParameter>(new DoubleParameter("Base constant", param2)));
+    gen.setParameter(shared_ptr<DoubleParameter>(new DoubleParameter("Dimension", param1)));
 
     gen.setSize(size*parts + 1, size*parts + 1);
     gen.setPartitioning(parts);

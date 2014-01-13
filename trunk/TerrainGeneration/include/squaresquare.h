@@ -1,6 +1,8 @@
 #include "terraingenerator.h"
 #include "errordeployer.h"
 #include "parameterizable.h"
+#include "doubleparameter.h"
+#include "doubleparametertype.h"
 
 #ifndef SQUARESQUARE_H
 #define SQUARESQUARE_H
@@ -23,15 +25,14 @@ namespace FLAT
 
             void setSize(long int width, long int height);
             void setPartitioning(long int partitioning);
-            void setParameter(int parameterNumber, const void* data);
-            void setParameter(string parameterName, const void* data);
+            void setParameter(shared_ptr<Parameter> data);
 
             int getNumParameters();
             string getParameterName(int parameterNumber);
-            string getParameterType(int parameterNumber);
-            string getParameterType(string parameterName);
-            const void* getParameter(int parameterNumber);
-            const void* getParameter(string parameterName);
+            shared_ptr<ParameterType> getParameterType(int parameterNumber);
+            shared_ptr<ParameterType> getParameterType(string parameterName);
+            shared_ptr<Parameter> getParameter(int parameterNumber);
+            shared_ptr<Parameter> getParameter(string parameterName);
 
             shared_ptr<Terrain> generateTerrain();
             shared_ptr<Terrain> getTerrain();

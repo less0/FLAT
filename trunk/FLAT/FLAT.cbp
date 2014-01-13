@@ -107,13 +107,23 @@
 			<Add directory="include" />
 		</Compiler>
 		<Unit filename="include/constants.h" />
+		<Unit filename="include/doubleparameter.h" />
+		<Unit filename="include/doubleparameterconverter.h" />
+		<Unit filename="include/doubleparametertype.h" />
 		<Unit filename="include/error.h" />
 		<Unit filename="include/errordeployer.h" />
+		<Unit filename="include/parameter.h" />
+		<Unit filename="include/parameterconverter.h" />
 		<Unit filename="include/parameterizable.h" />
+		<Unit filename="include/parametertype.h" />
 		<Unit filename="include/terrain.h" />
 		<Unit filename="src/constants.cpp" />
+		<Unit filename="src/doubleparameter.cpp" />
+		<Unit filename="src/doubleparameterconverter.cpp" />
+		<Unit filename="src/doubleparametertype.cpp" />
 		<Unit filename="src/error.cpp" />
 		<Unit filename="src/errordeployer.cpp" />
+		<Unit filename="src/parameter.cpp" />
 		<Unit filename="src/parameterizable.cpp" />
 		<Unit filename="src/terrain.cpp" />
 		<Extensions>
