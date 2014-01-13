@@ -2,6 +2,7 @@
 #include "terrain.h"
 #include "errordeployer.h"
 #include "parameterizable.h"
+#include "doubleparametertype.h"
 #include <random>
 #include <cmath>
 #include <map>
@@ -45,15 +46,14 @@ namespace FLAT
 
             void setSize(long int width, long int height);
             void setPartitioning(long int partitioning);
-            void setParameter(int parameterNumber, const void* data);
-            void setParameter(std::string parameterName, const void* data);
+            void setParameter(const unique_ptr<Parameter>& data);
 
             int getNumParameters();
-            std::string getParameterName(int parameterNumber);
-            std::string getParameterType(int parameterNumber);
-            std::string getParameterType(std::string parameterName);
-            const void* getParameter(int parameterNumber);
-            const void* getParameter(std::string parameterName);
+            string getParameterName(int parameterNumber);
+            shared_ptr<ParameterType> getParameterType(int parameterNumber);
+            shared_ptr<ParameterType> getParameterType(std::string parameterName);
+            shared_ptr<Parameter> getParameter(int parameterNumber);
+            shared_ptr<Parameter> getParameter(std::string parameterName);
 
             shared_ptr<Terrain> generateTerrain();
             shared_ptr<Terrain> getTerrain();

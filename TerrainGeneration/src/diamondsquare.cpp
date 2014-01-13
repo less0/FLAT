@@ -21,7 +21,6 @@ DiamondSquare::DiamondSquare(void)
 
 shared_ptr<Terrain> DiamondSquare::generateTerrain()
 {
-
 	//initialize random number generator
 	int seed = int(std::chrono::high_resolution_clock::now().time_since_epoch().count());
 	std::mt19937 generator(seed);
@@ -231,47 +230,41 @@ std::string DiamondSquare::getParameterName(int numParam)
 	return "";
 }
 
-void DiamondSquare::setParameter(std::string parameterName, const void* data)
+void DiamondSquare::setParameter(const unique_ptr<Parameter>& data)
 {
-	if(parameterName.compare(std::string("Dimension")))
+	if(data->getName().compare(std::string("Dimension")))
 	{
-		m_H = *((double*)data);
+		m_H = *((double*)data->getValue());
 	}
-	else if(parameterName.compare(std::string("Base constant")))
+	else if(data->getName().compare(std::string("Base constant")))
 	{
-		m_k = *((double*)data);
+		m_k = *((double*)data->getValue());
 	}
 }
 
-void DiamondSquare::setParameter(int numParam, const void* data)
+
+shared_ptr<ParameterType> DiamondSquare::getParameterType(int parameterNumber)
 {
-	setParameter(getParameterName(numParam), data);
+    return shared_ptr<ParameterType>(new DoubleParameterType());
 }
 
-///\todo Change to a more flexible version
-string DiamondSquare::getParameterType(int parameterNumber)
+
+shared_ptr<ParameterType> DiamondSquare::getParameterType(string parameterName)
 {
-    return "double";
+    return shared_ptr<ParameterType>(new DoubleParameterType());
 }
 
-///\todo Change to more flexoble version
-string DiamondSquare::getParameterType(string parameterName)
-{
-    ///\todo Change Type names to constants
-    return "double";
-}
-
-const void* DiamondSquare::getParameter(string parameterName)
+shared_ptr<Parameter> DiamondSquare::getParameter(string parameterName)
 {
     if(parameterName.compare("Dimension"))
-        return (const void*)&m_H;
+        return shared_ptr<Parameter>(new DoubleParameter(parameterName, m_H));
     if(parameterName.compare("Base constant"))
-        return (const void*)&m_k;
+        return shared_ptr<Parameter>(new DoubleParameter(parameterName, m_k));
 
-    return 0;
+    return shared_ptr<Parameter>((Parameter*)0);
 }
 
-const void* DiamondSquare::getParameter(int parameterNumber)
+shared_ptr<Parameter> DiamondSquare::getParameter(int parameterNumber)
 {
     ///\todo Add check if index exists
     return getParameter(m_parameters[parameterNumber]);

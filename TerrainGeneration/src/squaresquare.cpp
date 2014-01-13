@@ -109,20 +109,20 @@ int SquareSquare::getNumParameters()
     return 2;
 }
 
-const void* SquareSquare::getParameter(int parameterNumber)
+shared_ptr<Parameter> SquareSquare::getParameter(int parameterNumber)
 {
     switch(parameterNumber)
     {
     case 1:
-        return (const void*)&m_H;
+        return shared_ptr<Parameter>(new DoubleParameter(getParameterName(1), m_H));
     case 2:
-        return (const void*)&m_k;
+        return shared_ptr<Parameter>(new DoubleParameter(getParameterName(2), m_k));
     default:
         return 0;
     }
 }
 
-const void* SquareSquare::getParameter(std::string parameterName)
+shared_ptr<Parameter> SquareSquare::getParameter(std::string parameterName)
 {
     if(parameterName.compare(getParameterName(1)))
     {
@@ -136,28 +136,31 @@ const void* SquareSquare::getParameter(std::string parameterName)
     return 0;
 }
 
-void SquareSquare::setParameter(int paramterNumber, const void* data)
-{
-    switch(paramterNumber)
-    {
-    case 1:
-        m_H = *((double*)data);
-        break;
-    case 2:
-        m_k = *((double*)data);
-        break;
-    }
-}
+//void SquareSquare::setParameter(int paramterNumber, const void* data)
+//{
+//    switch(paramterNumber)
+//    {
+//    case 1:
+//        m_H = *((double*)data);
+//        break;
+//    case 2:
+//        m_k = *((double*)data);
+//        break;
+//    }
+//}
 
-void SquareSquare::setParameter(string parameterName, const void* data)
+void SquareSquare::setParameter(shared_ptr<Parameter> data)
 {
-    if(parameterName.compare(getParameterName(1)))
+    if(data->getName().compare(getParameterName(1)))
     {
-        setParameter(1, data);
+        shared_ptr<DoubleParameter> doubleData = dynamic_pointer_cast<DoubleParameter>(data);
+
+        if(doubleData)
+        m_H = doubleData->getDoubleValue();
     }
-    else if(parameterName.compare(getParameterName(2)))
+    else if(data->getName().compare(getParameterName(2)))
     {
-        setParameter(2, data);
+        shared_ptr<DoubleParameter> doubleData = dynamic_pointer_cast<DoubleParameter>(data);
     }
 }
 
@@ -174,20 +177,20 @@ std::string SquareSquare::getParameterName(int parameterNumber)
     }
 }
 
-std::string SquareSquare::getParameterType(int parameterNumber)
+shared_ptr<ParameterType> SquareSquare::getParameterType(int parameterNumber)
 {
     switch(parameterNumber)
     {
     case 1:
-        return "double";
+        return shared_ptr<ParameterType>(new DoubleParameterType());
     case 2:
-        return "double";
+        return shared_ptr<ParameterType>(new DoubleParameterType());
     default:
-        return "";
+        return shared_ptr<ParameterType>((ParameterType*)0);
     }
 }
 
-std::string SquareSquare::getParameterType(std::string parameterName)
+shared_ptr<ParameterType> SquareSquare::getParameterType(std::string parameterName)
 {
     for(int i=1; i<=getNumParameters(); i++)
     {
@@ -197,7 +200,7 @@ std::string SquareSquare::getParameterType(std::string parameterName)
         }
     }
 
-    return "";
+    return shared_ptr<ParameterType>((ParameterType*)0);
 }
 
 Error* getLastError()
