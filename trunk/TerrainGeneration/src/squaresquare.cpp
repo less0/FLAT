@@ -161,6 +161,9 @@ void SquareSquare::setParameter(shared_ptr<Parameter> data)
     else if(data->getName().compare(getParameterName(2)))
     {
         shared_ptr<DoubleParameter> doubleData = dynamic_pointer_cast<DoubleParameter>(data);
+
+        if(doubleData)
+            m_k = doubleData->getDoubleValue();
     }
 }
 

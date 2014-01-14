@@ -13,6 +13,9 @@
 			<Depends filename="TerrainExport/TerrainExport.cbp" />
 			<Depends filename="TerrainGeneration/TerrainGeneration.cbp" />
 		</Project>
-		<Project filename="Erosion/Erosion.cbp" />
+		<Project filename="Erosion/Erosion.cbp">
+			<Depends filename="FLAT/FLAT.cbp" />
+		</Project>
+		<Project filename="UnitTest++/Project/UnitTest++.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
