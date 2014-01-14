@@ -23,8 +23,8 @@ int main()
     int parts = 1;
     int size = 2100;
 
-    double param1 = .1;
-    double param2 = 2;
+    double param1 = 1;
+    double param2 = 1;
 
     gen.setParameter(shared_ptr<DoubleParameter>(new DoubleParameter("Base constant", param2)));
     gen.setParameter(shared_ptr<DoubleParameter>(new DoubleParameter("Dimension", param1)));
