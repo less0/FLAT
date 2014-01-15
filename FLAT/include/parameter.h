@@ -33,8 +33,9 @@ namespace FLAT
                 m_name = name;
             }
         protected:
-        private:
             string m_name;
+        private:
+
     };
 }
 

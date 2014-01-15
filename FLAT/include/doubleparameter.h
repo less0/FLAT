@@ -55,7 +55,6 @@ namespace FLAT
         protected:
         private:
             double m_value;
-            string m_name;
     };
 }
 

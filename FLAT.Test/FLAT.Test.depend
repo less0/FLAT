@@ -1,0 +1,118 @@
+# depslib dependency file v1.0
+1389682375 source:/home/paul/Programming/FLAT/FLAT.Test/main.cpp
+	<iostream>
+	<UnitTest++.h>
+
+1188366510 /home/paul/Programming/FLAT/UnitTest++/src/UnitTest++.h
+	"Config.h"
+	"Test.h"
+	"TestList.h"
+	"TestSuite.h"
+	"TestResults.h"
+	"TestMacros.h"
+	"CheckMacros.h"
+	"TestRunner.h"
+	"TimeConstraint.h"
+
+1225377516 /home/paul/Programming/FLAT/UnitTest++/src/Config.h
+
+1225291088 /home/paul/Programming/FLAT/UnitTest++/src/Test.h
+	"TestDetails.h"
+
+1174318456 /home/paul/Programming/FLAT/UnitTest++/src/TestDetails.h
+
+1180467758 /home/paul/Programming/FLAT/UnitTest++/src/TestList.h
+
+1174318456 /home/paul/Programming/FLAT/UnitTest++/src/TestSuite.h
+
+1174318456 /home/paul/Programming/FLAT/UnitTest++/src/TestResults.h
+
+1225394826 /home/paul/Programming/FLAT/UnitTest++/src/TestMacros.h
+	"Config.h"
+	"ExecuteTest.h"
+	"AssertException.h"
+	"TestDetails.h"
+	"MemoryOutStream.h"
+	"Posix/SignalTranslator.h"
+
+1225291088 /home/paul/Programming/FLAT/UnitTest++/src/ExecuteTest.h
+	"TestDetails.h"
+	"MemoryOutStream.h"
+	"AssertException.h"
+	"CurrentTest.h"
+	"Posix/SignalTranslator.h"
+
+1174318456 /home/paul/Programming/FLAT/UnitTest++/src/MemoryOutStream.h
+	"Config.h"
+	<sstream>
+	<cstddef>
+
+1174318456 /home/paul/Programming/FLAT/UnitTest++/src/AssertException.h
+	<exception>
+
+1225291088 /home/paul/Programming/FLAT/UnitTest++/src/CurrentTest.h
+
+1224683802 /home/paul/Programming/FLAT/UnitTest++/src/Posix/SignalTranslator.h
+	<setjmp.h>
+	<signal.h>
+
+1225291088 /home/paul/Programming/FLAT/UnitTest++/src/CheckMacros.h
+	"Checks.h"
+	"AssertException.h"
+	"MemoryOutStream.h"
+	"TestDetails.h"
+	"CurrentTest.h"
+
+1225376862 /home/paul/Programming/FLAT/UnitTest++/src/Checks.h
+	"Config.h"
+	"TestResults.h"
+	"MemoryOutStream.h"
+
+1225291088 /home/paul/Programming/FLAT/UnitTest++/src/TestRunner.h
+	"Test.h"
+	"TestList.h"
+	"CurrentTest.h"
+
+1225291088 /home/paul/Programming/FLAT/UnitTest++/src/TimeConstraint.h
+	"TimeHelpers.h"
+
+1174318456 /home/paul/Programming/FLAT/UnitTest++/src/TimeHelpers.h
+	"Config.h"
+	"Posix/TimeHelpers.h"
+	"Win32/TimeHelpers.h"
+
+1174318456 /home/paul/Programming/FLAT/UnitTest++/src/Posix/TimeHelpers.h
+	<sys/time.h>
+
+1225377516 /home/paul/Programming/FLAT/UnitTest++/src/Win32/TimeHelpers.h
+	"../Config.h"
+
+1389767392 source:/home/paul/Programming/FLAT/FLAT.Test/DoubleParameterTest.cpp
+	"doubleparameter.h"
+	"doubleparametertype.h"
+	"UnitTest++.h"
+
+1389767435 /home/paul/Programming/FLAT/FLAT/include/doubleparameter.h
+	<string>
+	<memory>
+	<parameter.h>
+
+1389767455 /home/paul/Programming/FLAT/FLAT/include/parameter.h
+	<string>
+
+1389281984 /home/paul/Programming/FLAT/FLAT/include/doubleparametertype.h
+	<doubleparameterconverter.h>
+	<parametertype.h>
+
+1389336262 /home/paul/Programming/FLAT/FLAT/include/doubleparameterconverter.h
+	<doubleparameter.h>
+	<parameterconverter.h>
+
+1389336416 /home/paul/Programming/FLAT/FLAT/include/parameterconverter.h
+	<string>
+	<memory>
+	"parameter.h"
+
+1386830400 /home/paul/Programming/FLAT/FLAT/include/parametertype.h
+	"parameterconverter.h"
+
