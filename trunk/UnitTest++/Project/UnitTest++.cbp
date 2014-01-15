@@ -122,7 +122,7 @@
 			</Target>
 		</Build>
 		<VirtualTargets>
-			<Add alias="All" targets="Debug;Release;Debug(linux);Release(linux);" />
+			<Add alias="All" targets="Debug;Release;Debug Linux;Release Linux;" />
 		</VirtualTargets>
 		<Unit filename="../src/AssertException.cpp" />
 		<Unit filename="../src/AssertException.h" />
@@ -140,20 +140,20 @@
 		<Unit filename="../src/MemoryOutStream.cpp" />
 		<Unit filename="../src/MemoryOutStream.h" />
 		<Unit filename="../src/Posix/SignalTranslator.cpp">
-			<Option target="Debug(linux)" />
-			<Option target="Release(linux)" />
+			<Option target="Debug Linux" />
+			<Option target="Release Linux" />
 		</Unit>
 		<Unit filename="../src/Posix/SignalTranslator.h">
-			<Option target="Debug(linux)" />
-			<Option target="Release(linux)" />
+			<Option target="Debug Linux" />
+			<Option target="Release Linux" />
 		</Unit>
 		<Unit filename="../src/Posix/TimeHelpers.cpp">
-			<Option target="Debug(linux)" />
-			<Option target="Release(linux)" />
+			<Option target="Debug Linux" />
+			<Option target="Release Linux" />
 		</Unit>
 		<Unit filename="../src/Posix/TimeHelpers.h">
-			<Option target="Debug(linux)" />
-			<Option target="Release(linux)" />
+			<Option target="Debug Linux" />
+			<Option target="Release Linux" />
 		</Unit>
 		<Unit filename="../src/ReportAssert.cpp" />
 		<Unit filename="../src/ReportAssert.h" />

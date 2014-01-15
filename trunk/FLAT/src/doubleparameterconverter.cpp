@@ -22,7 +22,7 @@ namespace FLAT {
         istringstream stream(value);
         double converted = .0;
 
-        if(!(stream >> value))
+        if(!(stream >> converted))
         {
             return .0;
         }

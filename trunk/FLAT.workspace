@@ -17,5 +17,9 @@
 			<Depends filename="FLAT/FLAT.cbp" />
 		</Project>
 		<Project filename="UnitTest++/Project/UnitTest++.cbp" />
+		<Project filename="FLAT.Test/FLAT.Test.cbp">
+			<Depends filename="FLAT/FLAT.cbp" />
+			<Depends filename="UnitTest++/Project/UnitTest++.cbp" />
+		</Project>
 	</Workspace>
 </CodeBlocks_workspace_file>
