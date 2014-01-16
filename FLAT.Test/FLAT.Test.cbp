@@ -50,6 +50,7 @@
 			<Add library="FLAT" />
 		</Linker>
 		<Unit filename="DoubleParameterTest.cpp" />
+		<Unit filename="IntParameterTest.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
