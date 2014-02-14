@@ -112,7 +112,11 @@
 		<Unit filename="include/doubleparametertype.h" />
 		<Unit filename="include/error.h" />
 		<Unit filename="include/errordeployer.h" />
+		<Unit filename="include/exception.h" />
+		<Unit filename="include/flat.h" />
+		<Unit filename="include/intparameter.h" />
 		<Unit filename="include/intparameterconverter.h" />
+		<Unit filename="include/intparametertype.h" />
 		<Unit filename="include/parameter.h" />
 		<Unit filename="include/parameterconverter.h" />
 		<Unit filename="include/parameterizable.h" />
@@ -124,7 +128,10 @@
 		<Unit filename="src/doubleparametertype.cpp" />
 		<Unit filename="src/error.cpp" />
 		<Unit filename="src/errordeployer.cpp" />
+		<Unit filename="src/exception.cpp" />
+		<Unit filename="src/intparameter.cpp" />
 		<Unit filename="src/intparameterconverter.cpp" />
+		<Unit filename="src/intparametertype.cpp" />
 		<Unit filename="src/parameter.cpp" />
 		<Unit filename="src/parameterizable.cpp" />
 		<Unit filename="src/terrain.cpp" />
