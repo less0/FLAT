@@ -6,7 +6,7 @@ FLAT: force_look
 UnitTest: force_look
 	cd ./UnitTest++; make
 
-FLAT.Test: FLAT UnitTest
+FLAT.Test: FLAT UnitTest force_look
 	cd ./FLAT.Test; make
 	./FLAT.Test/FLAT.Test
 
