@@ -32,6 +32,7 @@ namespace
         shared_ptr<DoubleParameter> parameter = dynamic_pointer_cast<DoubleParameter>(converter->convertValue("test", "3.14159"));
 
         CHECK_EQUAL(3.14159, parameter->getDoubleValue());
+		CHECK_EQUAL("täst", parameter->getName());
     }
 
     TEST(GetDoubleValueName)
