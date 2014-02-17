@@ -11,4 +11,4 @@ FLAT.Test:
 	gcc -p -Wall -std=c++0x -I../FLAT/include -I../UnitTest++/src  -g -c $<
 
 clean:
-	rm *.o
+	rm FLAT.Test
